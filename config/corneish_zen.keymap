@@ -9,6 +9,19 @@
   };
 };
 
+
+/ {
+    macros {
+        CTRL_A: CTRL_A {
+            label = "CTRL_A";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp A>;
+        };
+    };
+};
+
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -34,12 +47,12 @@
 // |  TAB |  ?  |  `  |  (  |  )  |  ~  | x | HOME | END  | {   |  }   | \|  | ENT |
 // | SHFT |  !  |  %  |  -  |  _  |  =  | x | LEFT | DOWN | UP  | RGHT |  :  |  "  |
 // | CTRL |  ^  |  $  |  #  |  +  |  *  | x |  [   |  ]   |  <  |  >   |  @  |  &  |
-//                    | CAP |     | GUI | x | BKSP | DEL  |     |
+//                    | CAP |     | GUI | x | BKSP | DEL  | CTRL-A |
                         bindings = <
    &kp  TAB  &kp QMARK &kp GRAVE &kp LPAR  &kp RPAR  &kp TILDE    &kp HOME &kp END  &kp LBRC &kp RBRC  &kp BSLH  &kp RET
    &kp LSHFT &kp EXCL  &kp PRCNT &kp MINUS &kp UNDER &kp EQUAL    &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp COLON &kp DQT
    &kp LCTRL &kp CARET &kp DLLR  &kp POUND &kp PLUS  &kp STAR     &kp LBKT &kp RBKT &kp LT   &kp GT    &kp AT    &kp AMPS
-             	                   &kp CAPS  &trans    &kp LGUI     &kp BSPC &kp DEL  &trans
+             	                   &kp CAPS  &trans    &kp LGUI     &kp BSPC &kp DEL  &CTRL_A
                         >;
                 };
 
