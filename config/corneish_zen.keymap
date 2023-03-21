@@ -31,7 +31,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
+                        label = "BASE";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  | x |  Y  |  U   |  I   |  O  |  P  | ENT |
 // | SHFT |  A  |  S  |  D  |  F  |  G  | x |  H  |  J   |  K   |  L  |  ;  |  '  |
@@ -46,7 +46,7 @@
                 };
 
                 lower_layer {
-                        label = "LOWER";
+                        label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  ?  |  `  |  (  |  )  |  ~  | x | HOME   | END  | {   |  }   | \|  | ENT |
 // | SHFT |  !  |  %  |  -  |  _  |  =  | x | LEFT   | DOWN | UP  | RGHT |  :  |  "  |
@@ -61,7 +61,7 @@
                 };
 
                 raise_layer {
-                        label = "UPPER";
+                        label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // |  TAB | VolU |  7  |  8  |  9  | BrtU | x | HOME | END  | PGUP | PGDN |     |      |
 // | SHFT | VolD |  4  |  5  |  6  | BrtD | x | LEFT | DOWN | UP   | RGHT |     |      |
