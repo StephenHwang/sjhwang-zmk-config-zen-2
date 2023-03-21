@@ -63,15 +63,15 @@
                 raise_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  TAB | VolU |  7  |  8  |  9  | BrtU | x | HOME | END  | PGUP | PGDN |     |      |
-// | SHFT | VolD |  4  |  5  |  6  | BrtD | x | LEFT | DOWN | UP   | RGHT |     |      |
-// | CTRL | Mute |  1  |  2  |  3  | MOD  | x |      |      |      |      |     |      |
-//                     | ALT |  0  |      | x |      |      |      |
+// |  TAB |    |  7  |  8  |  9  | DEL  | x | HOME | END  | PGUP | PGDN | BrtU | VolU |
+// | SHFT |    |  4  |  5  |  6  | BKSP | x | LEFT | DOWN | UP   | RGHT | BrtD | VolD |
+// | CTRL |    |  1  |  2  |  3  | MOD  | x |      |      |      |      |      | Mute |
+//                   | ALT |  0  |      | x |      |      |      |
                         bindings = <
-   &kp TAB   &kp C_VOL_UP &kp N7  &kp N8   &kp N9  &kp C_BRI_UP     &kp HOME &kp END  &kp PG_UP &kp PG_DN &trans &trans
-   &kp LSHFT &kp C_VOL_DN &kp N4  &kp N5   &kp N6  &kp C_BRI_DN     &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans &trans
-   &kp LCTRL &kp C_MUTE   &kp N1  &kp N2   &kp N3  &mo 3            &trans   &trans   &trans    &trans    &trans &trans
-                      	          &kp LALT &kp N0  &trans           &trans   &trans   &trans
+   &kp TAB   &trans &kp N7  &kp N8  &kp N9  &kp DEL      &kp HOME &kp END  &kp PG_UP &kp PG_DN &kp C_BRI_UP &kp C_VOL_UP
+   &kp LSHFT &trans &kp N4  &kp N5  &kp N6  &kp BSPC     &kp LEFT &kp DOWN &kp UP    &kp RIGHT &kp C_BRI_DN &kp C_VOL_DN
+   &kp LCTRL &trans &kp N1  &kp N2  &kp N3  &mo 3        &trans   &trans   &trans    &trans    &trans       &kp C_MUTE  
+                      	    &kp LALT &kp N0 &trans       &trans   &trans   &trans
                         >;
                 };
 
