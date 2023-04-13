@@ -166,7 +166,7 @@
    &kp TAB   &trans &kp N7  &kp N8  &kp N9  &kp DEL      &CTRL_SHFT_TAB &CTRL_TAB &kp PG_UP &kp PG_DN &trans       &trans
    &kp LSHFT &trans &kp N4  &kp N5  &kp N6  &kp BSPC     &M3            &M4       &M5       &M6       &trans       &trans
    &kp LCTRL &trans &kp N1  &kp N2  &kp N3  &mo 3        &M7            &M8       &trans    &trans    &trans       &trans
-                      	    &kp LALT &kp N0 &trans       &trans         &trans    &trans
+                      	    &kp LALT &kp N0 &trans       &trans         &CTRL_A   &trans
                         >;
                 };
 
