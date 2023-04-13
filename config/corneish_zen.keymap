@@ -11,6 +11,7 @@
 
 / {
     macros {
+
         CTRL_A: CTRL_A {
             label = "CTRL_A";
             compatible = "zmk,behavior-macro";
@@ -21,6 +22,79 @@
               , <&macro_release &kp LCTRL>
               ;
         };
+
+        M3: M3 {
+            label = "M3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+              <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_release &kp LCTRL>
+              , <&macro_tap &kp F>
+              ;
+        };
+
+        M4: M4 {
+            label = "M4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+              <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_release &kp LCTRL>
+              , <&macro_tap &kp N>
+              ;
+        };
+
+        M5: M5 {
+            label = "M5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+              <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_release &kp LCTRL>
+              , <&macro_tap &kp K>
+              ;
+        };
+
+        M6: M6 {
+            label = "M6";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+              <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_release &kp LCTRL>
+              , <&macro_tap &kp L>
+              ;
+        };
+
+        M7: M7 {
+            label = "M7";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+              <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_release &kp LCTRL>
+              , <&macro_tap &kp N>
+              ;
+        };
+
+        M8: M8 {
+            label = "M8";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+              <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_release &kp LCTRL>
+              , <&macro_tap &kp M>
+              ;
+        };
+
         CTRL_TAB: CTRL_TAB {
             label = "CTRL_TAB";
             compatible = "zmk,behavior-macro";
@@ -89,9 +163,9 @@
 // | CTRL |    |  1  |  2  |  3  | MOD  | x |          |               |      |      |      | Mute |
 //                   | ALT |  0  |      | x |          |               |      |
                         bindings = <
-   &kp TAB   &trans &kp N7  &kp N8  &kp N9  &kp DEL      &CTRL_SHFT_TAB &CTRL_TAB &kp PG_UP &kp PG_DN &kp C_BRI_UP &kp C_VOL_UP
-   &kp LSHFT &trans &kp N4  &kp N5  &kp N6  &kp BSPC     &kp LEFT       &kp DOWN  &kp UP    &kp RIGHT &kp C_BRI_DN &kp C_VOL_DN
-   &kp LCTRL &trans &kp N1  &kp N2  &kp N3  &mo 3        &trans         &trans    &trans    &trans    &trans       &kp C_MUTE  
+   &kp TAB   &trans &kp N7  &kp N8  &kp N9  &kp DEL      &CTRL_SHFT_TAB &CTRL_TAB &kp PG_UP &kp PG_DN &trans       &trans
+   &kp LSHFT &trans &kp N4  &kp N5  &kp N6  &kp BSPC     &M3            &M4       &M5       &M6       &trans       &trans
+   &kp LCTRL &trans &kp N1  &kp N2  &kp N3  &mo 3        &M7            &M8       &trans    &trans    &trans       &trans
                       	    &kp LALT &kp N0 &trans       &trans         &trans    &trans
                         >;
                 };
@@ -101,12 +175,12 @@
 // -----------------------------------------------------------------------------------------
 // |     | F12 | F7  | F8  | F9  |     | x |       |      |      |     |      |      |
 // |     | F11 | F4  | F5  | F6  |     | x | BTCLR | BT1  | BT2  | BT3 | BT4  | BT5  |
-// |     | F10 | F1  | F2  | F3  |     | x |       |      |      |     |      |      |
+// |     | F10 | F1  | F2  | F3  |     | x |       |      |      |     | BrtD | BrtU |
 //                   |     |     |     | x |       |      |
                         bindings = <
    &trans &kp F12 &kp F7  &kp F8  &kp F9  &trans    &trans     &trans       &trans       &trans       &trans       &trans
    &trans &kp F11 &kp F4  &kp F5  &kp F6  &trans    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-   &trans &kp F10 &kp F1  &kp F2  &kp F3  &trans    &trans     &trans       &trans       &trans       &trans       &trans
+   &trans &kp F10 &kp F1  &kp F2  &kp F3  &trans    &trans     &trans       &trans       &trans       &kp C_BRI_DN &kp C_BRI_UP
                       	  &trans  &trans  &trans    &trans     &trans       &trans
                         >;
                 };
